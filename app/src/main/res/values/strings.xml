@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OKey logger</string>
+    <string name="action_delete">Reset database</string>
+    <string name="action_load">Load custom phrases</string>
+    <string name="action_visible">Toggle phrase visibility</string>
+    <string name="action_user">Manage user info</string>
+    <string name="action_delete_file">Reset log file</string>
+    <string-array name="choice">
+        <item>Two - thumbs</item>
+        <item>One - handed</item>
+        <item>Cradling</item>
+    </string-array>
+
+    <string-array name="orientation">
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+</resources>

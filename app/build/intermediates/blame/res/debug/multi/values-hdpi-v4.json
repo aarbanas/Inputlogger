@@ -1,0 +1,80 @@
+[
+    {
+        "outputFile": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 13,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-hdpi\\values-hdpi.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endLine": 8,
+                        "endColumn": 13,
+                        "endOffset": 507
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 13,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/values-hdpi/values-hdpi.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endLine": 8,
+                        "endColumn": 13,
+                        "endOffset": 507
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 13,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-hdpi/values-hdpi.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endLine": 8,
+                        "endColumn": 13,
+                        "endOffset": 507
+                    }
+                }
+            }
+        ]
+    }
+]
