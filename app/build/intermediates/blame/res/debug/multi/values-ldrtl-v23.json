@@ -22,53 +22,5 @@
                 }
             }
         ]
-    },
-    {
-        "outputFile": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v23\\values-ldrtl-v23.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 112,
-                    "endOffset": 163
-                },
-                "from": {
-                    "file": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 240,
-                        "endColumn": 112,
-                        "endOffset": 348
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v23/values-ldrtl-v23.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 112,
-                    "endOffset": 163
-                },
-                "from": {
-                    "file": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-ldrtl-v23/values-ldrtl-v23.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 240,
-                        "endColumn": 112,
-                        "endOffset": 348
-                    }
-                }
-            }
-        ]
     }
 ]

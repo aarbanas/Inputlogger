@@ -372,7 +372,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 FileWriter phraseWriter = new FileWriter(logFile, true);
                 BufferedWriter br = new BufferedWriter(phraseWriter);
                 String str = timestamp + "," + mUsername + "," + orientation + "," + interStyle + "," + phraseSrc + "," + phraseID + "," + row + ","
-                        + String.valueOf(row.length()) + "," + inStream + "," + String.valueOf(diffTime) + "," + String.format(Locale.US,"%.2f", wpmcorrect) + "," + String.format(Locale.US,"%.2f", wpmtrans) + "," + String.format(Locale.US,"%.2f", ter) + "%," + String.format(Locale.US,"%.2f", cer) + "%," + String.format(Locale.US,"%.2f", ncer) + "%," + String.format(Locale.US,"%.2f", cbrer) + "%," + String.format(Locale.US,"%.2f", cawer) + "%";
+                        + String.valueOf(row.length()) + "," + inStream + "," + String.valueOf(diffTime) + ","
+                        + String.format(Locale.US,"%.2f", wpmcorrect) + "," + String.format(Locale.US,"%.2f", wpmtrans) + ","
+                        + String.format(Locale.US,"%.2f", ter) + "%," + String.format(Locale.US,"%.2f", cer) + "%,"
+                        + String.format(Locale.US,"%.2f", ncer) + "%," + String.format(Locale.US,"%.2f", cbrer) + "%,"
+                        + String.format(Locale.US,"%.2f", cawer) + "%";
                 //gore mozda staviti String.format(Locale.US,"0.2f",wpmcorrect...)
                 //Log.d("rerer",submittedPhrase);
                 br.append(str);

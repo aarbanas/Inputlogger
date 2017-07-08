@@ -1,13 +1,5 @@
 [
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout-sw600dp\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
-    },
-    {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/res/layout-sw600dp/design_layout_snackbar.xml"
     }

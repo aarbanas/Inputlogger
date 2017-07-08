@@ -1,19 +1,7 @@
 [
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
         "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_popup_exit.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
@@ -24,132 +12,32 @@
         "source": "/Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/res/anim/design_snackbar_out.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_fab_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/res/anim/design_snackbar_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_top.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_fade_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_slide_out_top.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
         "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
         "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
         "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/C:\\Users\\Beast\\Documents\\NKSprojekt\\projekti\\23122016\\sljubic-text-entry-test-1b359f73f283\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
@@ -164,7 +52,7 @@
         "source": "/Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/res/anim/design_fab_out.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/Arbi/Desktop/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/anim/abc_slide_out_top.xml"
     }
 ]
