@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.DocumentsContract;
 import android.support.annotation.NonNull;
@@ -34,9 +35,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener, MyDialogFragment.NoticeDialogListener, SingleChoiceDialogFragment.ChoiceDialogListener {
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener, MyDialogFragment.NoticeDialogListener{// SingleChoiceDialogFragment.ChoiceDialogListener {
 
     private Intent loadIntent;
+
+    String testName = "";
+    String keyboardType = "";
+    String interactionStyle = "";
+    String orientationVariable = "";
+    long phraseCount = 100;
+    long currentPhraseCount = 0;
+    boolean showTime = false;
+    boolean showResults = false;
+    Handler handler;
 
     private String filePatha;
     private String filePathb;
@@ -54,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     private TextView readPhrase;
     private EditText writePhrase;
+    private TextView usernameView;
+    private TextView showTimeView;
+    private TextView phraseCountView;
 
     private  FileWriter writer;
 
@@ -128,6 +142,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         // and read phrase edit text initialization
         writePhrase = (EditText) findViewById(R.id.writePhraseBox);
         readPhrase = (TextView) findViewById(R.id.readPhraseBox);
+        usernameView = (TextView) findViewById(R.id.username);
+        showTimeView = (TextView) findViewById(R.id.showTime);
+        phraseCountView = (TextView) findViewById(R.id.phraseCount);
+        handler = new Handler() ;
         readPhrase.setText("Tap here to get a random phrase.");
 
         // setting some flags to false
@@ -154,12 +172,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
                 //if return button is pressed
                 if (current == '\n') {
-                   // endTime = SystemClock.currentThreadTimeMillis();
-
+                    currentPhraseCount++;
+                    phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                     //check if empty string is in edittextbox
                     if(writePhrase.length() == 0 && inStream.length() == 0){
                         Toast.makeText(MainActivity.this, "Can't submit empty string", Toast.LENGTH_SHORT).show();
-                    }else {
+                    }
+                    else {
 
                             //clear the edit text and finalize input
                             //before submitting we get the final phrase in textbox and length
@@ -216,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     if (inStream.length() == 1 && !timerStart) {
                         startTime = SystemClock.elapsedRealtime();
                         timerStart = true;
+                        handler.postDelayed(runable,0);
                         Log.d("tag", "time started");
                     }
                     //filling in the char instream
@@ -226,6 +246,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
                 if (readPhrase.getText() == "Tap here to get a random phrase."){
                     //check if user is a dummy
                     // don't allow to submit placeholder text, and timer to start
@@ -237,17 +258,22 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         Toast.makeText(MainActivity.this, "Please, enter your username.", Toast.LENGTH_SHORT).show();
                         dummyDetected();
                     } else {
-                     /*   if (!timerStart) {
-                            startTime = SystemClock.elapsedRealtime();
-                            timerStart = true;
-                            Log.d("tag", "time started");
-                        }*/
-
+                        if (testName == ""){
+                            Toast.makeText(MainActivity.this, "Please select number of phrases for input", Toast.LENGTH_SHORT).show();
+                            dummyDetected();
+                        }
+                        else if (currentPhraseCount == phraseCount + 1){
+                            Toast.makeText(MainActivity.this, "You have written all phrases for this test", Toast.LENGTH_SHORT).show();
+                            dummyDetected();
+                        }
                         if (s.length() > start) {
                             current = s.charAt(start);
                         }
+
                     }
+
                 }
+
 
             }
 
@@ -345,8 +371,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         if (inStream.length() != 0) {
 
             //capture time
+            handler.removeCallbacks(runable);
             diffTime = (SystemClock.elapsedRealtime() - startTime) / 1000.0;
-            Toast.makeText(MainActivity.this, "Finished in " + diffTime + " s.", Toast.LENGTH_SHORT).show();
+       //   Toast.makeText(MainActivity.this, "Finished in " + diffTime + " s.", Toast.LENGTH_SHORT).show();
 
             //WPM counting only correct characters
             //-1 because timer starts after the first input
@@ -470,6 +497,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             phraseLenght = row.length();
             readPhrase.setText(row);
+            if (showTime == true){
+                showTimeView.setText("Current time: 0.0");
+        }
+
 
         } else {
 
@@ -559,6 +590,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         } else if (id == R.id.action_delete_file){
 
             resetLogFile();
+        } else if (id == R.id.action_test_settings){
+            Intent intent = new Intent(MainActivity.this, TestSettings.class);
+            startActivityForResult(intent, 1);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -628,6 +662,29 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 }
                 break;
 
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    TextView testNameView = (TextView) findViewById(R.id.testName);
+                    TextView keyboardView = (TextView) findViewById(R.id.keyboardType);
+                    testName = data.getStringExtra("TEST_NAME");
+                    keyboardType = data.getStringExtra("KEYBOARD_TYPE");
+                    interactionStyle = data.getStringExtra("INTER_STYLE");
+                    orientationVariable = data.getStringExtra("ORIENTATION");
+                    phraseCount = data.getLongExtra("PHRASE_COUNT", 0);
+                    showTime = data.getBooleanExtra("TIME", false);
+                    showResults = data.getBooleanExtra("RESULTS", false);
+
+                    testNameView.setText("Test name: " + testName);
+                    keyboardView.setText("Keyboard type: " + keyboardType);
+                    phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
+                    if (showTime == true){
+                        showTimeView.setText("Current time: " + diffTime);
+                    }
+
+
+                }
+                break;
+
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
@@ -640,12 +697,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         //log username
         Log.d("tag", username);
         mUsername = username;
-        SingleChoiceDialogFragment frag2 = new SingleChoiceDialogFragment();
-        frag2.mode = "interStyle";
-        frag2.show(getFragmentManager(), "Choice info");
-        SingleChoiceDialogFragment frag3 = new SingleChoiceDialogFragment();
-        frag3.mode = "orientation";
-        frag3.show(getFragmentManager(), "orientation info");
+        usernameView.setText("Username: " + mUsername);
+     //   SingleChoiceDialogFragment frag2 = new SingleChoiceDialogFragment();
+       // frag2.mode = "interStyle";
+        //frag2.show(getFragmentManager(), "Choice info");
+        //SingleChoiceDialogFragment frag3 = new SingleChoiceDialogFragment();
+        //frag3.mode = "orientation";
+        //frag3.show(getFragmentManager(), "orientation info");
 
     }
 
@@ -655,7 +713,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
 
-    @Override
+  /*  @Override
     public void onItemChosen(DialogFragment dialog, int choice, String mode) {
 
         Log.d("tag", String.valueOf(choice));
@@ -686,7 +744,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         Log.d("tag",interStyle + orientation);
 
     }
-
+*/
     //dafaq
     public static String getDataColumn(Context context, Uri uri, String selection,
                                        String[] selectionArgs) {
@@ -713,6 +771,19 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
         return null;
     }
+
+    public Runnable runable = new Runnable() {
+        @Override
+        public void run() {
+            if (showTime == true){
+                diffTime = (SystemClock.elapsedRealtime() - startTime) / 1000.0;
+                showTimeView.setText("Current time: " + diffTime);
+            }
+            handler.postDelayed(this, 0);
+        }
+    };
+
+
 
 
 }

@@ -55,7 +55,7 @@ public  class MyDialogFragment extends DialogFragment {
 
                 .setTitle("User info")
                 .setMessage("Enter username:")
-                .setPositiveButton("Next", new DialogInterface.OnClickListener() {
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 

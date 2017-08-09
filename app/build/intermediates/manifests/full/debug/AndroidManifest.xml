@@ -27,8 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.okey.okeylogger.LoadFile" >
-        </activity>
+        <activity android:name="com.example.okey.okeylogger.LoadFile" />
+        <activity android:name="com.example.okey.okeylogger.TestSettings" />
     </application>
 
 </manifest>
