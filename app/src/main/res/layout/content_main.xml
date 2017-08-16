@@ -91,5 +91,13 @@
             android:gravity="left"
             />
 
+        <TextView
+            android:id="@+id/textViewShowRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="0.2" />
+
     </LinearLayout>
 </RelativeLayout>

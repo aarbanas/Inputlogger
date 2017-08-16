@@ -5,6 +5,7 @@ import android.content.ContentUris;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.CharArrayBuffer;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private TextView usernameView;
     private TextView showTimeView;
     private TextView phraseCountView;
+    private TextView showResultsView;
 
     private  FileWriter writer;
 
@@ -145,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         usernameView = (TextView) findViewById(R.id.username);
         showTimeView = (TextView) findViewById(R.id.showTime);
         phraseCountView = (TextView) findViewById(R.id.phraseCount);
+        showResultsView = (TextView) findViewById(R.id.textViewShowRes);
         handler = new Handler() ;
         readPhrase.setText("Tap here to get a random phrase.");
 
@@ -161,22 +164,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             //reads the phrase lenght before text change
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
                 //capture phrase lenght
                 phraseLenght = writePhrase.length();
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
                 //if return button is pressed
-                if (current == '\n') {
-                    currentPhraseCount++;
-                    phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
+                if (s.length()>0 && s.subSequence(s.length()-1, s.length()).toString().equalsIgnoreCase("\n")) {
                     //check if empty string is in edittextbox
-                    if(writePhrase.length() == 0 && inStream.length() == 0){
+                    if(inStream.length() == 0){
                         Toast.makeText(MainActivity.this, "Can't submit empty string", Toast.LENGTH_SHORT).show();
+                        dummyDetected();
                     }
                     else {
 
@@ -220,10 +219,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
                             //clean the box and call the finishInput function
                             finishInput();
+                            currentPhraseCount++;
+                            phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                             writePhrase.getText().clear();
 
                     }
-                } else if (phraseLenght > writePhrase.length()) {
+                } else if (phraseLenght > writePhrase.length() && timerStart) {
 
                     //if user hits backspace, log it
                     inStream = inStream + "[backspace]";
@@ -231,8 +232,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     //F metric
                     bckspccnt=bckspccnt+1;
                     Log.d("bckspcounter", Integer.toString(bckspccnt));
-                } else {
-                    if (inStream.length() == 1 && !timerStart) {
+                }
+                else {
+                    if (phraseLenght != 0 && writePhrase.length() == 0) {
+                        Log.d("End","Finished!!");
+                        current = '\0';
+
+                    } else if (!timerStart || inStream.length() == 0 ) {
                         startTime = SystemClock.elapsedRealtime();
                         timerStart = true;
                         handler.postDelayed(runable,0);
@@ -251,7 +257,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     //check if user is a dummy
                     // don't allow to submit placeholder text, and timer to start
                     //remind the dummy he has to tap to get a phrase
-                    Toast.makeText(MainActivity.this, "Tap to get a phrase, dummy.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Tap to get a phrase!", Toast.LENGTH_SHORT).show();
                     dummyDetected();
                 }else {
                     if (mUsername.isEmpty()) {
@@ -262,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                             Toast.makeText(MainActivity.this, "Please select number of phrases for input", Toast.LENGTH_SHORT).show();
                             dummyDetected();
                         }
-                        else if (currentPhraseCount == phraseCount + 1){
+                        else if (currentPhraseCount == phraseCount){
                             Toast.makeText(MainActivity.this, "You have written all phrases for this test", Toast.LENGTH_SHORT).show();
                             dummyDetected();
                         }
@@ -273,7 +279,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     }
 
                 }
-
 
             }
 
@@ -416,6 +421,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 timerStart = false;
                 bckspccnt=0;
                 Log.d("tag", "file updated");
+                if (showResults == true){
+                    showResultsView.setText("WPM correct: " + wpmcorrect + "\n" +
+                                            "WPM transcribed: " + wpmtrans + "\n" +
+                                            "TER: " + ter);
+                }
 
             } catch (IOException e) {
 
@@ -497,9 +507,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             phraseLenght = row.length();
             readPhrase.setText(row);
+            showResultsView.setText("");
             if (showTime == true){
                 showTimeView.setText("Current time: 0.0");
         }
+
 
 
         } else {
