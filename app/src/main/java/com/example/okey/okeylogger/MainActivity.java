@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     String testName = "";
     String keyboardType = "";
-    String interactionStyle = "";
-    String orientationVariable = "";
+    String tempKeyboard = "";
     long phraseCount = 100;
     long currentPhraseCount = 0;
     boolean showTime = false;
@@ -403,8 +402,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             try {
                 FileWriter phraseWriter = new FileWriter(logFile, true);
                 BufferedWriter br = new BufferedWriter(phraseWriter);
-                String str = timestamp + "," + mUsername + "," + orientation + "," + interStyle + "," + phraseSrc + "," + phraseID + "," + row + ","
-                        + String.valueOf(row.length()) + "," + inStream + "," + String.valueOf(diffTime) + ","
+                String str = timestamp + "," + testName + "," + keyboardType + "," + mUsername + "," + orientation + "," + interStyle + ","
+                        + phraseID + "," + row + "," + String.valueOf(row.length()) + "," + inStream + "," + String.valueOf(diffTime) + ","
                         + String.format(Locale.US,"%.2f", wpmcorrect) + "," + String.format(Locale.US,"%.2f", wpmtrans) + ","
                         + String.format(Locale.US,"%.2f", ter) + "%," + String.format(Locale.US,"%.2f", cer) + "%,"
                         + String.format(Locale.US,"%.2f", ncer) + "%," + String.format(Locale.US,"%.2f", cbrer) + "%,"
@@ -459,7 +458,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             try{
                 writer = new FileWriter(logFile);
                 writer.append("\"sep=,\"\n");
-                writer.append("timestamp,username,orientation,inter_style,phrase_src,phrase_ID,phrase,phrase_lenght,input_stream,time,wpmcorrect,wpmtrans,ter,cer,ncer,cbrer,cawer\n");
+                writer.append("timestamp,test_name,keyboard_type,username,orientation,inter_style,phrase_ID,phrase,phrase_lenght,input_stream," +
+                        "time,wpmcorrect,wpmtrans,ter,cer,ncer,cbrer,cawer\n");
                 writer.flush();
                 writer.close();
                 Log.d("tag", "First line written!");
@@ -473,7 +473,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     public void resetLogFile(){
         new AlertDialog.Builder(this)
-        .setTitle("Beware! Dragons ahead!")
+        .setTitle("Reset LOG file")
         .setMessage("Are you really sure you want to reset the log file?")
         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
@@ -508,10 +508,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             phraseLenght = row.length();
             readPhrase.setText(row);
             showResultsView.setText("");
+            tempKeyboard = keyboardType;
             if (showTime == true){
                 showTimeView.setText("Current time: 0.0");
-        }
-
+            }
+            else {
+                showTimeView.setText("");
+            }
 
 
         } else {
@@ -540,7 +543,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_delete) {
             new AlertDialog.Builder(this)
-            .setTitle("Beware! Dragons ahead!")
+            .setTitle("Reset database")
             .setMessage("Are you really sure you want to reset the database?")
             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
@@ -604,6 +607,15 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             resetLogFile();
         } else if (id == R.id.action_test_settings){
             Intent intent = new Intent(MainActivity.this, TestSettings.class);
+            if (testName != "" && keyboardType != "" && phraseCount != 0){
+                intent.putExtra("TEST_NAME", testName);
+                intent.putExtra("KEYBOARD_TYPE", keyboardType);
+                intent.putExtra("PHRASE_COUNT", phraseCount);
+                intent.putExtra("INTER_STYLE", interStyle);
+                intent.putExtra("ORIENTATION", orientation);
+                intent.putExtra("TIME", showTime);
+                intent.putExtra("RESULTS", showResults);
+            }
             startActivityForResult(intent, 1);
         }
         return super.onOptionsItemSelected(item);
@@ -680,19 +692,21 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     TextView keyboardView = (TextView) findViewById(R.id.keyboardType);
                     testName = data.getStringExtra("TEST_NAME");
                     keyboardType = data.getStringExtra("KEYBOARD_TYPE");
-                    interactionStyle = data.getStringExtra("INTER_STYLE");
-                    orientationVariable = data.getStringExtra("ORIENTATION");
+                    interStyle = data.getStringExtra("INTER_STYLE");
+                    orientation = data.getStringExtra("ORIENTATION");
                     phraseCount = data.getLongExtra("PHRASE_COUNT", 0);
                     showTime = data.getBooleanExtra("TIME", false);
                     showResults = data.getBooleanExtra("RESULTS", false);
 
                     testNameView.setText("Test name: " + testName);
                     keyboardView.setText("Keyboard type: " + keyboardType);
-                    phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                     if (showTime == true){
                         showTimeView.setText("Current time: " + diffTime);
                     }
-
+                    if (tempKeyboard != keyboardType){
+                        currentPhraseCount = 0;
+                        phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
+                    }
 
                 }
                 break;
@@ -710,12 +724,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         Log.d("tag", username);
         mUsername = username;
         usernameView.setText("Username: " + mUsername);
-     //   SingleChoiceDialogFragment frag2 = new SingleChoiceDialogFragment();
-       // frag2.mode = "interStyle";
-        //frag2.show(getFragmentManager(), "Choice info");
-        //SingleChoiceDialogFragment frag3 = new SingleChoiceDialogFragment();
-        //frag3.mode = "orientation";
-        //frag3.show(getFragmentManager(), "orientation info");
+        currentPhraseCount = 0;
+        phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
 
     }
 
@@ -725,39 +735,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
 
-  /*  @Override
-    public void onItemChosen(DialogFragment dialog, int choice, String mode) {
-
-        Log.d("tag", String.valueOf(choice));
-        //log which option is chosen
-        if(mode == "interStyle") {
-            if (choice == 0) {
-
-                interStyle = "two-thumbs";
-
-            } else if (choice == 1) {
-
-                interStyle = "one-handed";
-
-            } else {
-
-                interStyle = "cradling";
-            }
-        }else{
-            if(choice == 0) {
-
-                orientation = "portrait";
-            }else {
-
-                orientation = "landscape";
-            }
-
-        }
-        Log.d("tag",interStyle + orientation);
-
-    }
-*/
-    //dafaq
     public static String getDataColumn(Context context, Uri uri, String selection,
                                        String[] selectionArgs) {
 

@@ -32,6 +32,7 @@ public class TestSettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_settings);
+        Bundle extras = getIntent().getExtras();
 
         final EditText testName = (EditText) findViewById(R.id.editTextTestName);
         final EditText keyboardType = (EditText) findViewById(R.id.editTextKeyboardType);
@@ -48,6 +49,56 @@ public class TestSettings extends AppCompatActivity {
         final Button buttonOK = (Button) findViewById(R.id.buttonOk);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
         final TextView test123123 = (TextView) findViewById(R.id.textView);
+
+        if (extras != null){
+            testNameVariable = extras.getString("TEST_NAME");
+            keyboardTypeVariable = extras.getString("KEYBOARD_TYPE");
+            phraseCountVariable = extras.getLong("PHRASE_COUNT");
+            interactionStyleVariable = extras.getString("INTER_STYLE");
+            orientationVariable = extras.getString("ORIENTATION");
+            showTimeVariable = extras.getBoolean("TIME");
+            showResultsVariable = extras.getBoolean("RESULTS");
+            testName.setText(testNameVariable);
+            keyboardType.setText(keyboardTypeVariable);
+            phraseCount.setText(Long.toString(phraseCountVariable));
+            if (interactionStyleVariable != ""){
+                if (interactionStyleVariable.equals("Two-thumbs")){
+                    interactionStyle.check(buttonTT.getId());
+                }
+                else if (interactionStyleVariable.equals("One-handed")){
+                    interactionStyle.check(buttonOH.getId());
+                }
+                else {
+                    interactionStyle.check(buttonC.getId());
+                }
+            }
+            if (orientationVariable != ""){
+                if (orientationVariable.equals("Portrait")){
+                    orientation.check(buttonP.getId());
+                }
+                else{
+                    orientation.check(buttonL.getId());
+                }
+            }
+            if (showTimeVariable){
+                if (showTimeVariable == true){
+                    showTime.setChecked(true);
+                }
+                else {
+                    showTime.setChecked(false);
+                }
+            }
+            if (showResultsVariable){
+                if (showResultsVariable == true){
+                    showResults.setChecked(true);
+                }
+                else {
+                    showResults.setChecked(false);
+                }
+            }
+
+
+        }
 
         testName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -113,8 +164,6 @@ public class TestSettings extends AppCompatActivity {
             }
         });
 
-        interactionStyle.check(buttonTT.getId());
-        interactionStyleVariable = "Two-thumbs";
         interactionStyle.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -130,8 +179,6 @@ public class TestSettings extends AppCompatActivity {
             }
         });
 
-        orientation.check(buttonP.getId());
-        orientationVariable = "Portrait";
         orientation.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -171,7 +218,7 @@ public class TestSettings extends AppCompatActivity {
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (testNameVariable == "" || keyboardTypeVariable == "" || phraseCountVariable == 0){
+                if (testNameVariable == "" || keyboardTypeVariable == "" || phraseCountVariable == 0 || interactionStyleVariable == "" || orientationVariable == ""){
                     Toast toast = Toast.makeText(getApplicationContext(),"Cant submit without selecting everything",Toast.LENGTH_SHORT);
                     toast.show();
                 }
