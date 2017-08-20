@@ -280,7 +280,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 }
 
             }
+        });
 
+        writePhrase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                writePhrase.setSelection(writePhrase.getText().length());
+            }
         });
 
     }
@@ -771,9 +777,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             handler.postDelayed(this, 0);
         }
     };
-
-
-
 
 }
 
