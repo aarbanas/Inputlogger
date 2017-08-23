@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="commons-1.0.8">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/116f913b1dfc1a017ce6f0032c29f1e5b32ee51d/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/116f913b1dfc1a017ce6f0032c29f1e5b32ee51d/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/in.gauriinfotech/commons/1.0.8/ed19368c7517166d12a98e695fc560025b517007/commons-1.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

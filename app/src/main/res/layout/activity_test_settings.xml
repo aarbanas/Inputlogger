@@ -132,6 +132,12 @@
         android:layout_height="wrap_content"
         android:text="Show results after each phrase" />
 
+    <Switch
+        android:id="@+id/switchVisability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toggle phrase visability" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

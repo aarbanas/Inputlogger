@@ -1,78 +1,122 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:3:5-42
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:4:5-42
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:3:5-51
 	xmlns:android
 		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:5:5-80
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:5:22-77
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:6:5-81
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:6:22-78
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:9:22-78
 application
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:8:5-26:19
-MERGED from [com.android.support:design:23.1.1] /Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/Arbi/.android/build-cache/d8ce7a3d0d0998b1940e3d2b2be7814b4e76d44e/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Arbi/.android/build-cache/e3a109d728e54ac8ac78a175ace8908b97abf61f/output/AndroidManifest.xml:9:5-20
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:11:5-30:19
+REJECTED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:transition:25.3.1] /Users/Arbi/.android/build-cache/fdaad2866cccfd72c173d6fcad3a8765f48ccb74/output/AndroidManifest.xml:26:5-20
+REJECTED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Arbi/.android/build-cache/e3a109d728e54ac8ac78a175ace8908b97abf61f/output/AndroidManifest.xml:9:5-20
+REJECTED from [in.gauriinfotech:commons:1.0.8] /Users/Arbi/.android/build-cache/116f913b1dfc1a017ce6f0032c29f1e5b32ee51d/output/AndroidManifest.xml:11:5-15:19
+REJECTED from [com.android.volley:volley:1.0.0] /Users/Arbi/.android/build-cache/66bfbd568b99c5043d92c77e65478c0dec51a690/output/AndroidManifest.xml:9:5-20
+REJECTED from [com.android.support:appcompat-v7:25.3.1] /Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:support-v4:25.3.1] /Users/Arbi/.android/build-cache/9da222459febab242dd9fc792f13273cc20d9db0/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:support-fragment:25.3.1] /Users/Arbi/.android/build-cache/a2a1b3e20614b4ec1f8c47522abe1273a0ecebd4/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:support-media-compat:25.3.1] /Users/Arbi/.android/build-cache/4236443fa5d0e7ed0e0e89d32019bfd5f4dea4f1/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:support-core-ui:25.3.1] /Users/Arbi/.android/build-cache/3a6877ca5d3b271f9421654cd42e329bf9a5ecc5/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:support-core-utils:25.3.1] /Users/Arbi/.android/build-cache/75db17513b160c0bc9aac5b7a9cc278e434d4839/output/AndroidManifest.xml:29:5-20
+REJECTED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/80f35c50951f78d95763bfa940ca4278c7e9ea41/output/AndroidManifest.xml:26:5-20
+REJECTED from [com.android.support:support-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/81efcf603ae87d3e12766c52152fd44465d87d2a/output/AndroidManifest.xml:26:5-20
+REJECTED from [com.android.support:support-compat:25.3.1] /Users/Arbi/.android/build-cache/0c236c7d2ee681fc185b816858509c316f89c1e2/output/AndroidManifest.xml:29:5-20
+	tools:node
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:16:9-29
 	android:label
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:11:9-37
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:14:9-37
 	android:supportsRtl
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:15:9-35
 	android:allowBackup
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:13:9-43
 	android:theme
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:17:9-40
 activity#com.example.okey.okeylogger.MainActivity
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:14:9-23:20
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:18:9-27:20
 	android:label
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:20:13-41
 	android:theme
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:17:13-56
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:21:13-56
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:19:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:25:27-74
 activity#com.example.okey.okeylogger.LoadFile
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:24:9-55
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:28:9-55
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:24:19-43
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:28:19-43
 activity#com.example.okey.okeylogger.TestSettings
-ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:25:9-59
+ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:29:9-59
 	android:name
-		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:25:19-47
+		ADDED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml:29:19-47
 uses-sdk
 INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:23.1.1] /Users/Arbi/.android/build-cache/a734807ee4eb1284f24d15bc45d4a3b1bdaeb927/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/Arbi/.android/build-cache/aec2b7d8a3b9b83f34441c72bc97668edc1917e8/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/Arbi/.android/build-cache/d8ce7a3d0d0998b1940e3d2b2be7814b4e76d44e/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Arbi/.android/build-cache/d7c12e7bfc24e9409370f4451e47a3d185ac6b2d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/Arbi/.android/build-cache/fdaad2866cccfd72c173d6fcad3a8765f48ccb74/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Arbi/.android/build-cache/e3a109d728e54ac8ac78a175ace8908b97abf61f/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services:3.1.36] /Users/Arbi/.android/build-cache/8a54a4a2b6200f3bc37386549fdba8a51a9b109c/output/AndroidManifest.xml:7:5-42
+MERGED from [in.gauriinfotech:commons:1.0.8] /Users/Arbi/.android/build-cache/116f913b1dfc1a017ce6f0032c29f1e5b32ee51d/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.volley:volley:1.0.0] /Users/Arbi/.android/build-cache/66bfbd568b99c5043d92c77e65478c0dec51a690/output/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Arbi/.android/build-cache/9da222459febab242dd9fc792f13273cc20d9db0/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Arbi/.android/build-cache/a2a1b3e20614b4ec1f8c47522abe1273a0ecebd4/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Arbi/.android/build-cache/4236443fa5d0e7ed0e0e89d32019bfd5f4dea4f1/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Arbi/.android/build-cache/3a6877ca5d3b271f9421654cd42e329bf9a5ecc5/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Arbi/.android/build-cache/75db17513b160c0bc9aac5b7a9cc278e434d4839/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/80f35c50951f78d95763bfa940ca4278c7e9ea41/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/81efcf603ae87d3e12766c52152fd44465d87d2a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Arbi/.android/build-cache/0c236c7d2ee681fc185b816858509c316f89c1e2/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Arbi/.android/build-cache/d7c12e7bfc24e9409370f4451e47a3d185ac6b2d/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/Arbi/.android/build-cache/fdaad2866cccfd72c173d6fcad3a8765f48ccb74/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Arbi/.android/build-cache/9da222459febab242dd9fc792f13273cc20d9db0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Arbi/.android/build-cache/a2a1b3e20614b4ec1f8c47522abe1273a0ecebd4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Arbi/.android/build-cache/4236443fa5d0e7ed0e0e89d32019bfd5f4dea4f1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Arbi/.android/build-cache/3a6877ca5d3b271f9421654cd42e329bf9a5ecc5/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Arbi/.android/build-cache/75db17513b160c0bc9aac5b7a9cc278e434d4839/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/80f35c50951f78d95763bfa940ca4278c7e9ea41/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Arbi/.android/build-cache/81efcf603ae87d3e12766c52152fd44465d87d2a/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Arbi/.android/build-cache/0c236c7d2ee681fc185b816858509c316f89c1e2/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/AndroidManifest.xml:26:9-47

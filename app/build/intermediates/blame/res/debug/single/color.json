@@ -1,38 +1,98 @@
 [
     {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_light.xml",
+        "source": "/Users/Arbi/.android/build-cache/8a54a4a2b6200f3bc37386549fdba8a51a9b109c/output/res/color/common_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_search_url_text.xml"
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_search_url_text.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/switch_thumb_material_light.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_primary_text_material_light.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/res/color/design_error.xml"
     },
     {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/switch_thumb_material_dark.xml"
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/Arbi/.android/build-cache/8a54a4a2b6200f3bc37386549fdba8a51a9b109c/output/res/color/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/Arbi/.android/build-cache/328685b726c6edcc4f4f3b2a34fcb5801586425a/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_btn_colored_text_material.xml"
     },
     {
         "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/color/abc_secondary_text_material_light.xml"
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/Arbi/Desktop/Fax/4. Godina/I. semestar/Napredna korisnicka sucelja/Input_logger_and_metrics_w_Levenshtein/Application/sljubic-text-entry-test-1b359f73f283/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/color/abc_tint_edittext.xml"
     }
 ]

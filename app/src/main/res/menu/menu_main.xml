@@ -10,9 +10,6 @@
     <item android:id="@+id/action_load" android:title="@string/action_load"
         android:orderInCategory="2" app:showAsAction="never" />
 
-    <item android:id="@+id/action_visibility" android:title="@string/action_visible"
-        android:orderInCategory="3" app:showAsAction="never" />
-
     <item android:id="@+id/action_user" android:title="@string/action_user"
         android:orderInCategory="4" app:showAsAction="never" />
 

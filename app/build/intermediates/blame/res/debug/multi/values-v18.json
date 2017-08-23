@@ -11,13 +11,13 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "/Users/Arbi/.android/build-cache/f50ccfedac9b42a230a62c4060768a6be9fae9ad/output/res/values-v18/values-v18.xml",
+                    "file": "/Users/Arbi/.android/build-cache/8f6b3fb9122699d1ceef9535597dc17b9b108924/output/res/values-v18/values-v18.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 229,
+                        "startOffset": 55,
                         "endColumn": 48,
-                        "endOffset": 273
+                        "endOffset": 99
                     }
                 }
             }

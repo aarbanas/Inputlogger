@@ -19,5 +19,21 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Udostępnij dla"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Udostępnij dla %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Zwiń"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Włącz Usługi Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Ta aplikacja nie będzie działać, jeśli nie włączysz Usług Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Włącz Usługi Google Play"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Pobierz Usługi Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na telefonie."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na tablecie."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Pobierz Usługi Google Play"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Nieznany problem z Usługami Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Usługi Google Play, od których zależy działanie niektórych aplikacji, nie są obsługiwane na Twoim urządzeniu. Skontaktuj się z producentem, by uzyskać pomoc."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Usługi Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Aktualizuj"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Ta aplikacja nie będzie działać, jeśli nie zaktualizujesz Usług Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Aktualizuj Usługi Google Play"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Zaloguj się"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Zaloguj się przez Google"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Szukaj"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

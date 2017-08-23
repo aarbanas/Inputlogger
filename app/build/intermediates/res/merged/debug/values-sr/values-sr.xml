@@ -19,5 +19,21 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Дели са"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Дели са апликацијом %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Скупи"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Омогући Google Play услуге"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Ова апликација неће функционисати ако не омогућите Google Play услуге."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Омогућавање Google Play услуга"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Преузми Google Play услуге"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ова апликација не може да се покрене без Google Play услуга, које недостају на телефону."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ова апликација не може да се покрене без Google Play услуга, које недостају на таблету."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Преузимање Google Play услуга"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Непознат проблем са Google Play услугама."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play услуге, које су потребне за функционисање неких од апликација, нису подржане на уређају. Контактирајте произвођача да бисте добили помоћ."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play услуге"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Ажурирај"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Ова апликација не може да се покрене ако не ажурирате Google Play услуге."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Ажурирање Google Play услуга"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Пријави ме"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Пријави ме преко Google-а"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Претражи"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
 </resources>

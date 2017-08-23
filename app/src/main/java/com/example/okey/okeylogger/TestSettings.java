@@ -27,6 +27,7 @@ public class TestSettings extends AppCompatActivity {
     long phraseCountVariable = 0;
     boolean showTimeVariable = false;
     boolean showResultsVariable = false;
+    boolean phraseVisabilityVariable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class TestSettings extends AppCompatActivity {
         final RadioButton buttonL = (RadioButton) findViewById(R.id.radioButtonL);
         final Switch showTime = (Switch) findViewById(R.id.switchTime);
         final Switch showResults = (Switch) findViewById(R.id.switchResults);
+        final Switch phraseVisability = (Switch) findViewById(R.id.switchVisability);
         final Button buttonOK = (Button) findViewById(R.id.buttonOk);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
         final TextView test123123 = (TextView) findViewById(R.id.textView);
@@ -58,6 +60,7 @@ public class TestSettings extends AppCompatActivity {
             orientationVariable = extras.getString("ORIENTATION");
             showTimeVariable = extras.getBoolean("TIME");
             showResultsVariable = extras.getBoolean("RESULTS");
+            phraseVisabilityVariable = extras.getBoolean("VISABILITY");
             testName.setText(testNameVariable);
             keyboardType.setText(keyboardTypeVariable);
             phraseCount.setText(Long.toString(phraseCountVariable));
@@ -94,6 +97,14 @@ public class TestSettings extends AppCompatActivity {
                 }
                 else {
                     showResults.setChecked(false);
+                }
+            }
+            if (phraseVisabilityVariable){
+                if (phraseVisabilityVariable == true){
+                    phraseVisability.setChecked(true);
+                }
+                else {
+                    phraseVisability.setChecked(false);
                 }
             }
 
@@ -215,6 +226,18 @@ public class TestSettings extends AppCompatActivity {
             }
         });
 
+        phraseVisability.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (phraseVisability.isChecked()){
+                    phraseVisabilityVariable = true;
+                }
+                else{
+                    phraseVisabilityVariable = false;
+                }
+            }
+        });
+
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -231,6 +254,7 @@ public class TestSettings extends AppCompatActivity {
                     intent.putExtra("PHRASE_COUNT",phraseCountVariable);
                     intent.putExtra("TIME", showTimeVariable);
                     intent.putExtra("RESULTS", showResultsVariable);
+                    intent.putExtra("VISABILITY", phraseVisabilityVariable);
                     setResult(RESULT_OK, intent);
                     finish();
                 }

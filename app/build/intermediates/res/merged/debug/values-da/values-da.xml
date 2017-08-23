@@ -19,5 +19,21 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Del med"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Del med %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Skjul"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Aktivér Google Play-tjenester"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Denne app virker ikke, medmindre du aktiverer Google Play-tjenester."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Aktivér Google Play-tjenester"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Hent Google Play-tjenester"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Denne app kan ikke køre uden Google Play-tjenester, som mangler på din telefon."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Denne app kan ikke køre uden Google Play-tjenester, som mangler på din tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Hent Google Play-tjenester"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Ukendt problem med Google Play-tjenester."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play-tjenester, som nogle af dine applikationer er afhængige af, understøttes ikke af din enhed. Kontakt producenten for at få hjælp."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play-tjenester"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Opdater"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Denne app kan ikke køre, medmindre du opdaterer Google Play-tjenester."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Opdater Google Play-tjenester"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Log ind"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Log ind med Google"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Søg"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

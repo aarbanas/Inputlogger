@@ -3,6 +3,7 @@ package com.example.okey.okeylogger;
 import android.Manifest;
 import android.app.DialogFragment;
 import android.content.ContentUris;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.DocumentsContract;
+import android.provider.OpenableColumns;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -34,24 +36,31 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
+
+import in.gauriinfotech.commons.Commons;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener, MyDialogFragment.NoticeDialogListener{// SingleChoiceDialogFragment.ChoiceDialogListener {
 
     private Intent loadIntent;
 
-    String testName = "";
-    String keyboardType = "";
-    String tempKeyboard = "";
-    long phraseCount = 100;
-    long currentPhraseCount = 0;
-    boolean showTime = false;
-    boolean showResults = false;
-    Handler handler;
+    private String testName = "";
+    private String keyboardType = "";
+    private String tempKeyboard = "";
+    private long phraseCount = 0;
+    private long currentPhraseCount = 0;
+    private boolean showTime = false;
+    private boolean showResults = false;
+    private boolean toggleVisability = false;
+    private Handler handler;
 
     private String filePatha;
     private String filePathb;
@@ -390,8 +399,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             //capture time
             handler.removeCallbacks(runable);
-            diffTime = (SystemClock.elapsedRealtime() - startTime) / 1000.0;
-       //   Toast.makeText(MainActivity.this, "Finished in " + diffTime + " s.", Toast.LENGTH_SHORT).show();
+            if (showTime == false) diffTime = (SystemClock.elapsedRealtime() - startTime) / 1000.0;
+            //   Toast.makeText(MainActivity.this, "Finished in " + diffTime + " s.", Toast.LENGTH_SHORT).show();
 
             //WPM counting only correct characters
             //-1 because timer starts after the first input
@@ -433,11 +442,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 inStream = "";
                 timerStart = false;
                 bckspccnt=0;
+                tempKeyboard = keyboardType;
                 Log.d("tag", "file updated");
                 if (showResults == true){
-                    showResultsView.setText("WPM correct: " + wpmcorrect + "\n" +
-                                            "WPM transcribed: " + wpmtrans + "\n" +
-                                            "TER: " + ter);
+                    showResultsView.setText("Time: " + String.valueOf(diffTime) + "\t\t\t" + "TER: " + String.format(Locale.US,"%.2f", ter) + "\n"
+                                          + "WPM correct: " + String.format(Locale.US,"%.2f", wpmcorrect) + "\n" + "WPM transcribed: "
+                                          + String.format(Locale.US,"%.2f", wpmtrans));
                 }
 
             } catch (IOException e) {
@@ -522,7 +532,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             phraseLenght = row.length();
             readPhrase.setText(row);
             showResultsView.setText("");
-            tempKeyboard = keyboardType;
             if (showTime == true){
                 showTimeView.setText("Current time: 0.0");
             }
@@ -595,19 +604,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             }
 
-            //phrase visibility
-        } else if (id == R.id.action_visibility) {
-
-            if (readPhrase.getVisibility() == View.VISIBLE) {
-
-                readPhrase.setVisibility(View.GONE);
-
-            } else {
-
-                readPhrase.setVisibility(View.VISIBLE);
-            }
-
-        } else if (id == R.id.action_user) {
+            //username
+        }  else if (id == R.id.action_user) {
 
             //starting username dialog
             MyDialogFragment frag = new MyDialogFragment();
@@ -629,6 +627,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 intent.putExtra("ORIENTATION", orientation);
                 intent.putExtra("TIME", showTime);
                 intent.putExtra("RESULTS", showResults);
+                intent.putExtra("VISABILITY", toggleVisability);
             }
             startActivityForResult(intent, 1);
         }
@@ -642,63 +641,69 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         final String isDown = "com.android.providers.downloads.documents";
 
 
-
         switch (requestCode) {
 
             case 0:
 
                 if (resultCode == RESULT_OK) {
 
-                    Uri fileUri = data.getData();
-                    Log.d("tag", "File uri: " + fileUri.toString());
+                    Uri uri = data.getData();
+                    String filePath = uri.toString();
+                    File myFile = new File(filePath);
+                    String displayName = null;
+                    if (filePath.startsWith("content://")) {
+                        Cursor cursor = null;
+                        try {
+                            cursor = this.getContentResolver().query(uri, null, null, null, null);
+                            if (cursor != null && cursor.moveToFirst()) {
+                   //             displayName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                                String fullPath = Commons.getPath(uri, this);
+                                filePatha = fullPath;
+                                sourceDB = new SqlDatabase(ctx, filePatha);
+                                Log.d("tag", "File path: " + filePathb);
+                            }
 
-                    filePatha = fileUri.getPath();
-                    Log.d("tag", "File path: " + filePatha);
-
-                    //check if the file selected comes from external storage
-                    if(isExt.equals(fileUri.getAuthority())){
-
-                        filePathb = Environment.getExternalStorageDirectory() + "/" + filePatha.split(":")[1];
-                        Log.d("tag", "File path: " + filePathb);
-                        phraseSrc = filePatha.split(":")[1];
-
-                        //check if the file selected comes from Downloads directory
-                    }else if(isDown.equals(fileUri.getAuthority())){
-
-                        final String id;
-                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-                            id = DocumentsContract.getDocumentId(fileUri);
-
-                            final Uri contentUri = ContentUris.withAppendedId(
-                                    Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
-
-
-                            filePathb = getDataColumn(ctx, contentUri, null, null);
-                            array = filePathb.split("/");
-                            phraseSrc = array[array.length - 1];
+                        } finally {
+                            cursor.close();
                         }
+                    } else if (filePath.startsWith("file://")) {
+                   //     displayName = myFile.getName();
+                        String tmpfilepath = myFile.getAbsolutePath();
+                        tmpfilepath = tmpfilepath.replaceAll("file:/", "");
+                        filePatha = tmpfilepath;
+                        sourceDB = new SqlDatabase(ctx, filePatha);
                         Log.d("tag", "File path: " + filePathb);
-                        Log.d("tag", phraseSrc);
                     }
-
 
                     //other instance of SqlDatabase class
                     //using constructor with ctx and filepath arguments
                     // when we have a defined file path to read from
-                    int currentApiVersion = Build.VERSION.SDK_INT;
-                    if (currentApiVersion <= Build.VERSION_CODES.KITKAT){
-                        if (Build.VERSION.RELEASE == "4.4.4"){
-                            sourceDB = new SqlDatabase(ctx, filePathb);
-                        }else {
-                            sourceDB = new SqlDatabase(ctx, filePatha);
-                        }
-                    }else {
-                        sourceDB = new SqlDatabase(ctx, filePathb);
+                    FileReader file = null;
+                    try {
+                        file = new FileReader(filePatha);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
                     }
+                    BufferedReader buffer = new BufferedReader(file);
                     SQLiteDatabase db2 = sourceDB.getWritableDatabase();
+                    String line = "";
+                    sourceDB.deleteDatabase();
+                    db2.beginTransaction();
+                    try {
+                        while ((line = buffer.readLine()) != null) {
+                            ContentValues cv = new ContentValues();
+                            cv.put("phrase", line.trim());
+                            db2.insert("phrases", null, cv);
 
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    db2.setTransactionSuccessful();
+                    db2.endTransaction();
                 }
                 break;
+
 
             case 1:
                 if (resultCode == RESULT_OK) {
@@ -711,16 +716,22 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     phraseCount = data.getLongExtra("PHRASE_COUNT", 0);
                     showTime = data.getBooleanExtra("TIME", false);
                     showResults = data.getBooleanExtra("RESULTS", false);
+                    toggleVisability = data.getBooleanExtra("VISABILITY", false);
 
                     testNameView.setText("Test name: " + testName);
                     keyboardView.setText("Keyboard type: " + keyboardType);
+                    phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                     if (showTime == true){
                         showTimeView.setText("Current time: " + diffTime);
                     }
-                    if (tempKeyboard != keyboardType){
+                    if (!tempKeyboard.equals(keyboardType) ){
                         currentPhraseCount = 0;
                         phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                     }
+                    if (toggleVisability == true){
+                        readPhrase.setVisibility(View.GONE);
+                    }
+                    else readPhrase.setVisibility(View.VISIBLE);
 
                 }
                 break;
@@ -738,9 +749,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         Log.d("tag", username);
         mUsername = username;
         usernameView.setText("Username: " + mUsername);
-        currentPhraseCount = 0;
-        phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
-
+        if (phraseCount != 0){
+            currentPhraseCount = 0;
+            phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
+        }
     }
 
     @Override

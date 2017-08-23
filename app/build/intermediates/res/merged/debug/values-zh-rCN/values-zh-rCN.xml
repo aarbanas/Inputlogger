@@ -19,5 +19,21 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"分享方式"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"通过%s分享"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收起"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"启用 Google Play 服务"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"您必须先启用 Google Play 服务才能运行此应用。"</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"启用 Google Play 服务"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"获取 Google Play 服务"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"您的手机中没有 Google Play 服务，您必须先安装该服务才能运行此应用。"</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"您的平板电脑中没有 Google Play 服务，您必须先安装该服务才能运行此应用。"</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"获取 Google Play 服务"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play 服务出现未知问题。"</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"您的设备不支持部分应用所依赖的 Google Play 服务。请与设备制造商联系，以寻求帮助。"</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play 服务"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"更新"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"您必须先更新 Google Play 服务才能运行此应用。"</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"更新 Google Play 服务"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"登录"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"使用 Google 帐户登录"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"搜索"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>
