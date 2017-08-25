@@ -32,7 +32,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +46,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import in.gauriinfotech.commons.Commons;
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private boolean showResults = false;
     private boolean toggleVisability = false;
     private Handler handler;
+    AlertDialog sendDialog;
 
     private String filePatha;
     private String filePathb;
@@ -68,8 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private String interStyle, orientation, phraseSrc, phraseID;
     private String mUsername = "";
     private String  inStream = "";
-
-    private String[] array;
 
     private Context ctx;
 
@@ -169,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         readPhrase.setFocusable(false);
 
         ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                 1);
 
         // setting touch listener to handle touch events
@@ -590,8 +594,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         } else if (id == R.id.action_load) {
 
             loadIntent = new Intent(Intent.ACTION_GET_CONTENT);
+            String [] mimeTypes = {"text/*","text/plain","text/rtf"};
             loadIntent.setType("*/*");
-            loadIntent.addCategory(Intent.CATEGORY_OPENABLE);
+            loadIntent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
 
             try {
 
@@ -630,16 +635,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 intent.putExtra("VISABILITY", toggleVisability);
             }
             startActivityForResult(intent, 1);
+        } else if (id == R.id.action_upload_log){
+            dialog_for_sending("http://207.154.235.97/logapk/sendfile-logger.php",
+                    "Enter name of log file for upload to server",
+                    "Send log file to server",
+                    "Log file successfully sent.",
+                    "Error sending log file via network.");
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        final String isExt = "com.android.externalstorage.documents";
-        final String isDown = "com.android.providers.downloads.documents";
-
 
         switch (requestCode) {
 
@@ -823,6 +830,97 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             // other 'case' lines to check for other
             // permissions this app might request
         }
+    }
+
+    private void dialog_for_sending(final String urladdress,
+                                    String dlgMessage, String dlgTitle,
+                                    final String dlgResultOK, final String dlgResultNOTok){
+
+        // Let's design dialog programatically:
+        // It will contain title, text, editbox, and progressbar. And 2 buttons, of course.
+        // Progress bar will be shown only when network operation lasts longer.
+        final LinearLayout myDialogLayout = new LinearLayout(this);
+        myDialogLayout.setOrientation(LinearLayout.VERTICAL);
+        final EditText myDialogEditText = new EditText(this);
+        final ProgressBar myBar = new ProgressBar(this, null, android.R.attr.progressBarStyleLarge);
+   //     myDialogLayout.addView(myDialogEditText);
+        // myDialogLayout.addView(myBar); // only when network operation is performed
+
+        final AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);
+        alertDlg.setPositiveButton("Send", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        alertDlg.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                return;
+            }
+        });
+
+        sendDialog = alertDlg.create();
+        sendDialog.setMessage(dlgMessage);
+        sendDialog.setTitle(dlgTitle);
+        sendDialog.setView(myDialogLayout);
+
+        /*
+        Add an OnShowListener to change the OnClickListener on the first time the alert is shown.
+        Calling getButton() before the alert is shown will return null.
+        Then use a regular View.OnClickListener for the button, which will not dismiss
+        the AlertDialog after it has been called.
+        */
+
+        sendDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+                final Button button = sendDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+    /*                    String myEditTextValue = myDialogEditText.getText().toString();
+    //                    File renamed = new File(String.valueOf(logFile));
+    //                    renamed.renameTo(new File(myEditTextValue));
+                        System.out.println("Entered: " + myEditTextValue);
+                        if (myEditTextValue.equals(""))
+                        {
+                            showToastFromDialog("Name not entered");
+                        } else {*/
+                            // SEND highscore via network!
+                            myDialogLayout.addView(myBar);
+                            button.setEnabled(false);
+                            sendDialog.getButton(DialogInterface.BUTTON_NEGATIVE).setEnabled(false);
+
+                            SendTask mySendTask = new SendTask(
+                                    urladdress,
+                                    logFile.getAbsolutePath(),
+                                    logFile.getName());
+                            mySendTask.setNetworkOperationFinished(new SendTask.NetworkOperationFinished() {
+                                @Override
+                                public void onNetworkOperationFinished(String response) {
+                                    myBar.setVisibility(View.INVISIBLE);
+                                    sendDialog.cancel();
+                                    if (response!="") {
+                                        showToastFromDialog(dlgResultOK);
+                                    } else {
+                                        showToastFromDialog(dlgResultNOTok);
+                                    }
+                                }
+                            });
+                            mySendTask.execute();
+
+                       // }
+                    }
+                });
+            }
+        });
+
+        sendDialog.show();
+    }
+
+    private void showToastFromDialog(String message){
+        Toast.makeText(this, message , Toast.LENGTH_SHORT).show();
     }
 
 }

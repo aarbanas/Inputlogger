@@ -26,6 +26,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services:3.1.36'
     compile 'in.gauriinfotech:commons:1.0.8'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
 
     testCompile 'junit:junit:4.12'
 }

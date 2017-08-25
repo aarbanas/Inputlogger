@@ -6,6 +6,7 @@
     <string name="action_user">Manage user info</string>
     <string name="action_delete_file">Reset log file</string>
     <string name="action_test_settings">Test settings</string>
+    <string name="action_upload_log">Upload log file</string>
     <string-array name="choice">
         <item>Two - thumbs</item>
         <item>One - handed</item>

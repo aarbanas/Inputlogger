@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/action_delete" android:title="@string/action_delete"
-        android:orderInCategory="100" app:showAsAction="never" />
+        android:orderInCategory="6" app:showAsAction="never" />
 
     <item android:id="@+id/action_test_settings" android:title="@string/action_test_settings"
         android:orderInCategory="1" app:showAsAction="never" />
@@ -11,8 +11,11 @@
         android:orderInCategory="2" app:showAsAction="never" />
 
     <item android:id="@+id/action_user" android:title="@string/action_user"
-        android:orderInCategory="4" app:showAsAction="never" />
+        android:orderInCategory="3" app:showAsAction="never" />
 
     <item android:id="@+id/action_delete_file" android:title="@string/action_delete_file"
         android:orderInCategory="5" app:showAsAction="never" />
+
+    <item android:id="@+id/action_upload_log" android:title="@string/action_upload_log"
+        android:orderInCategory="4" app:showAsAction="never" />
 </menu>
