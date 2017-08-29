@@ -28,6 +28,7 @@ public class TestSettings extends AppCompatActivity {
     boolean showTimeVariable = false;
     boolean showResultsVariable = false;
     boolean phraseVisabilityVariable = false;
+    boolean cursorMovementVariable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class TestSettings extends AppCompatActivity {
         final Switch showTime = (Switch) findViewById(R.id.switchTime);
         final Switch showResults = (Switch) findViewById(R.id.switchResults);
         final Switch phraseVisability = (Switch) findViewById(R.id.switchVisability);
+        final Switch cursorMovement = (Switch) findViewById(R.id.switchCursor);
         final Button buttonOK = (Button) findViewById(R.id.buttonOk);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
         final TextView test123123 = (TextView) findViewById(R.id.textView);
@@ -61,6 +63,7 @@ public class TestSettings extends AppCompatActivity {
             showTimeVariable = extras.getBoolean("TIME");
             showResultsVariable = extras.getBoolean("RESULTS");
             phraseVisabilityVariable = extras.getBoolean("VISABILITY");
+            cursorMovementVariable = extras.getBoolean("CURSOR");
             testName.setText(testNameVariable);
             keyboardType.setText(keyboardTypeVariable);
             phraseCount.setText(Long.toString(phraseCountVariable));
@@ -105,6 +108,14 @@ public class TestSettings extends AppCompatActivity {
                 }
                 else {
                     phraseVisability.setChecked(false);
+                }
+            }
+            if (cursorMovementVariable){
+                if (cursorMovementVariable == true){
+                    cursorMovement.setChecked(true);
+                }
+                else{
+                    cursorMovement.setChecked(false);
                 }
             }
 
@@ -238,6 +249,18 @@ public class TestSettings extends AppCompatActivity {
             }
         });
 
+        cursorMovement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (cursorMovement.isChecked()){
+                    cursorMovementVariable = true;
+                }
+                else {
+                    cursorMovementVariable = false;
+                }
+            }
+        });
+
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -255,6 +278,7 @@ public class TestSettings extends AppCompatActivity {
                     intent.putExtra("TIME", showTimeVariable);
                     intent.putExtra("RESULTS", showResultsVariable);
                     intent.putExtra("VISABILITY", phraseVisabilityVariable);
+                    intent.putExtra("CURSOR", cursorMovementVariable);
                     setResult(RESULT_OK, intent);
                     finish();
                 }

@@ -80,7 +80,7 @@ public class SendTask extends AsyncTask<String, String, String> {
         finalResponse="";
 
         try {
-            final MediaType MEDIA_TYPE_CSV = MediaType.parse("text/csv");
+            final MediaType MEDIA_TYPE_CSV = MediaType.parse("text/plain");
             final OkHttpClient client = new OkHttpClient();
 
 

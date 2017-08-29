@@ -138,6 +138,12 @@
         android:layout_height="wrap_content"
         android:text="Toggle phrase visability" />
 
+    <Switch
+        android:id="@+id/switchCursor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't allow user to move cursor in text" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private boolean showTime = false;
     private boolean showResults = false;
     private boolean toggleVisability = false;
+    private boolean moveCursor = false;
     private Handler handler;
     AlertDialog sendDialog;
 
@@ -306,7 +307,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         writePhrase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                writePhrase.setSelection(writePhrase.getText().length());
+                if (moveCursor == true){
+                    writePhrase.setSelection(writePhrase.getText().length());
+                }
+
             }
         });
 
@@ -633,14 +637,30 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 intent.putExtra("TIME", showTime);
                 intent.putExtra("RESULTS", showResults);
                 intent.putExtra("VISABILITY", toggleVisability);
+                intent.putExtra("CURSOR", moveCursor);
             }
             startActivityForResult(intent, 1);
         } else if (id == R.id.action_upload_log){
-            dialog_for_sending("http://207.154.235.97/logapk/sendfile-logger.php",
-                    "Enter name of log file for upload to server",
-                    "Send log file to server",
-                    "Log file successfully sent.",
-                    "Error sending log file via network.");
+            if (testName.equals("")){
+                Toast.makeText(MainActivity.this, "Please enter test name for file upload", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                File dir = Environment.getExternalStorageDirectory();
+                String finalName = testName + ".csv";
+                if(dir.exists()){
+                    File from = new File(dir,logFile.getName());
+                    File to = new File(dir,finalName);
+                    if(from.exists())
+                        from.renameTo(to);
+                    logFile = to;
+                }
+                dialog_for_sending("http://207.154.235.97/logapk/sendfile-logger.php",
+                        "Do you want to upload " + testName + ".csv to server?",
+                        "Send log file to server",
+                        "Log file successfully sent.",
+                        "Error sending log file via network.");
+            }
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -657,13 +677,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     Uri uri = data.getData();
                     String filePath = uri.toString();
                     File myFile = new File(filePath);
-                    String displayName = null;
                     if (filePath.startsWith("content://")) {
                         Cursor cursor = null;
                         try {
                             cursor = this.getContentResolver().query(uri, null, null, null, null);
                             if (cursor != null && cursor.moveToFirst()) {
-                   //             displayName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
                                 String fullPath = Commons.getPath(uri, this);
                                 filePatha = fullPath;
                                 sourceDB = new SqlDatabase(ctx, filePatha);
@@ -674,7 +692,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                             cursor.close();
                         }
                     } else if (filePath.startsWith("file://")) {
-                   //     displayName = myFile.getName();
                         String tmpfilepath = myFile.getAbsolutePath();
                         tmpfilepath = tmpfilepath.replaceAll("file:/", "");
                         filePatha = tmpfilepath;
@@ -724,6 +741,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     showTime = data.getBooleanExtra("TIME", false);
                     showResults = data.getBooleanExtra("RESULTS", false);
                     toggleVisability = data.getBooleanExtra("VISABILITY", false);
+                    moveCursor = data.getBooleanExtra("CURSOR", false);
 
                     testNameView.setText("Test name: " + testName);
                     keyboardView.setText("Keyboard type: " + keyboardType);
@@ -841,10 +859,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         // Progress bar will be shown only when network operation lasts longer.
         final LinearLayout myDialogLayout = new LinearLayout(this);
         myDialogLayout.setOrientation(LinearLayout.VERTICAL);
-        final EditText myDialogEditText = new EditText(this);
         final ProgressBar myBar = new ProgressBar(this, null, android.R.attr.progressBarStyleLarge);
-   //     myDialogLayout.addView(myDialogEditText);
-        // myDialogLayout.addView(myBar); // only when network operation is performed
 
         final AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);
         alertDlg.setPositiveButton("Send", new DialogInterface.OnClickListener() {
@@ -874,20 +889,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         sendDialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialog) {
-
                 final Button button = sendDialog.getButton(DialogInterface.BUTTON_POSITIVE);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-    /*                    String myEditTextValue = myDialogEditText.getText().toString();
-    //                    File renamed = new File(String.valueOf(logFile));
-    //                    renamed.renameTo(new File(myEditTextValue));
-                        System.out.println("Entered: " + myEditTextValue);
-                        if (myEditTextValue.equals(""))
-                        {
-                            showToastFromDialog("Name not entered");
-                        } else {*/
-                            // SEND highscore via network!
+                //        File renamed = new File(logFile.toURI());
+                        //renamed.renameTo(new File(testName));
+
                             myDialogLayout.addView(myBar);
                             button.setEnabled(false);
                             sendDialog.getButton(DialogInterface.BUTTON_NEGATIVE).setEnabled(false);
@@ -909,8 +917,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 }
                             });
                             mySendTask.execute();
-
-                       // }
                     }
                 });
             }
