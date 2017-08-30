@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private boolean toggleVisability = false;
     private boolean moveCursor = false;
     private Handler handler;
+    private int isPhrasewritten = 0;
     AlertDialog sendDialog;
 
     private String filePatha;
@@ -255,7 +256,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     Log.d("bckspcounter", Integer.toString(bckspccnt));
                 }
                 else {
-                    if (phraseLenght != 0 && writePhrase.length() == 0) {
+                    if (phraseLenght != 0 && writePhrase.length() == 0 && inStream.length() == 0) {
                         Log.d("End","Finished!!");
                         current = '\0';
 
@@ -291,6 +292,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         }
                         else if (currentPhraseCount == phraseCount){
                             Toast.makeText(MainActivity.this, "You have written all phrases for this test", Toast.LENGTH_SHORT).show();
+                            dummyDetected();
+                        }
+                        else if (isPhrasewritten == 1 && writePhrase.length() !=0){
+                            Toast.makeText(MainActivity.this, "You have allready written this phrase, click to get new one", Toast.LENGTH_SHORT).show();
                             dummyDetected();
                         }
                         if (s.length() > start) {
@@ -451,6 +456,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 timerStart = false;
                 bckspccnt=0;
                 tempKeyboard = keyboardType;
+                isPhrasewritten = 1;
                 Log.d("tag", "file updated");
                 if (showResults == true){
                     showResultsView.setText("Time: " + String.valueOf(diffTime) + "\t\t\t" + "TER: " + String.format(Locale.US,"%.2f", ter) + "\n"
@@ -540,6 +546,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             phraseLenght = row.length();
             readPhrase.setText(row);
             showResultsView.setText("");
+            inStream = "";
+            isPhrasewritten = 0;
             if (showTime == true){
                 showTimeView.setText("Current time: 0.0");
             }
