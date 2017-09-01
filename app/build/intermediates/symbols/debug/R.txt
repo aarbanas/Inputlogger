@@ -802,6 +802,7 @@ int id action_mode_bar_stub 0x7f0e006a
 int id action_mode_close_button 0x7f0e004d
 int id action_test_settings 0x7f0e00c3
 int id action_text 0x7f0e00aa
+int id action_toggle_visibility 0x7f0e00c8
 int id action_upload_log 0x7f0e00c7
 int id action_user 0x7f0e00c5
 int id actions 0x7f0e00b8
@@ -942,9 +943,9 @@ int id status_bar_latest_event_content 0x7f0e00ad
 int id submenuarrow 0x7f0e0068
 int id submit_area 0x7f0e0079
 int id switchCursor 0x7f0e0091
+int id switchPhrases 0x7f0e0090
 int id switchResults 0x7f0e008f
 int id switchTime 0x7f0e008e
-int id switchVisability 0x7f0e0090
 int id tabMode 0x7f0e001a
 int id terrain 0x7f0e0043
 int id testName 0x7f0e0096

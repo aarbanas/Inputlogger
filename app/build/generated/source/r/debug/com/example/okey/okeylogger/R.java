@@ -3289,6 +3289,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f0e004d;
         public static final int action_test_settings=0x7f0e00c3;
         public static final int action_text=0x7f0e00aa;
+        public static final int action_toggle_visibility=0x7f0e00c8;
         public static final int action_upload_log=0x7f0e00c7;
         public static final int action_user=0x7f0e00c5;
         public static final int actions=0x7f0e00b8;
@@ -3429,9 +3430,9 @@ containing a value of this type.
         public static final int submenuarrow=0x7f0e0068;
         public static final int submit_area=0x7f0e0079;
         public static final int switchCursor=0x7f0e0091;
+        public static final int switchPhrases=0x7f0e0090;
         public static final int switchResults=0x7f0e008f;
         public static final int switchTime=0x7f0e008e;
-        public static final int switchVisability=0x7f0e0090;
         public static final int tabMode=0x7f0e001a;
         public static final int terrain=0x7f0e0043;
         public static final int testName=0x7f0e0096;

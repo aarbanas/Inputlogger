@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private long currentPhraseCount = 0;
     private boolean showTime = false;
     private boolean showResults = false;
-    private boolean toggleVisability = false;
+    private boolean repeatPhrase = false;
     private boolean moveCursor = false;
     private Handler handler;
     private int isPhrasewritten = 0;
@@ -269,6 +269,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     //filling in the char instream
                     inStream = inStream + current;
                     Log.d("tag", inStream);
+                    isPhraseOver();
                 }
             }
 
@@ -291,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                             dummyDetected();
                         }
                         else if (currentPhraseCount == phraseCount){
-                            Toast.makeText(MainActivity.this, "You have written all phrases for this test", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "You have written all phrases for this test", Toast.LENGTH_LONG).show();
                             dummyDetected();
                         }
                         else if (isPhrasewritten == 1 && writePhrase.length() !=0){
@@ -456,13 +457,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 timerStart = false;
                 bckspccnt=0;
                 tempKeyboard = keyboardType;
-                isPhrasewritten = 1;
                 Log.d("tag", "file updated");
                 if (showResults == true){
                     showResultsView.setText("Time: " + String.valueOf(diffTime) + "\t\t\t" + "TER: " + String.format(Locale.US,"%.2f", ter) + "\n"
                                           + "WPM correct: " + String.format(Locale.US,"%.2f", wpmcorrect) + "\n" + "WPM transcribed: "
                                           + String.format(Locale.US,"%.2f", wpmtrans));
                 }
+
+                if (repeatPhrase == true) isPhrasewritten = 1;
 
             } catch (IOException e) {
 
@@ -634,6 +636,17 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         } else if (id == R.id.action_delete_file){
 
             resetLogFile();
+
+            //phrase visibility
+        } else if (id == R.id.action_toggle_visibility){
+            if (readPhrase.getVisibility() == View.VISIBLE) {
+
+                readPhrase.setVisibility(View.GONE);
+
+            } else {
+
+                readPhrase.setVisibility(View.VISIBLE);
+            }
         } else if (id == R.id.action_test_settings){
             Intent intent = new Intent(MainActivity.this, TestSettings.class);
             if (testName != "" && keyboardType != "" && phraseCount != 0){
@@ -644,7 +657,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 intent.putExtra("ORIENTATION", orientation);
                 intent.putExtra("TIME", showTime);
                 intent.putExtra("RESULTS", showResults);
-                intent.putExtra("VISABILITY", toggleVisability);
+                intent.putExtra("PHRASE_REPEAT", repeatPhrase);
                 intent.putExtra("CURSOR", moveCursor);
             }
             startActivityForResult(intent, 1);
@@ -748,7 +761,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     phraseCount = data.getLongExtra("PHRASE_COUNT", 0);
                     showTime = data.getBooleanExtra("TIME", false);
                     showResults = data.getBooleanExtra("RESULTS", false);
-                    toggleVisability = data.getBooleanExtra("VISABILITY", false);
+                    repeatPhrase = data.getBooleanExtra("PHRASE_REPEAT", false);
                     moveCursor = data.getBooleanExtra("CURSOR", false);
 
                     testNameView.setText("Test name: " + testName);
@@ -761,10 +774,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         currentPhraseCount = 0;
                         phraseCountView.setText("Phrase count: " + currentPhraseCount + "/" + phraseCount);
                     }
-                    if (toggleVisability == true){
+                 /*   if (toggleVisability == true){
                         readPhrase.setVisibility(View.GONE);
                     }
-                    else readPhrase.setVisibility(View.VISIBLE);
+                    else readPhrase.setVisibility(View.VISIBLE);*/
 
                 }
                 break;
@@ -935,6 +948,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     private void showToastFromDialog(String message){
         Toast.makeText(this, message , Toast.LENGTH_SHORT).show();
+    }
+
+    private void isPhraseOver(){
+        if (phraseLenght != 0 && writePhrase.length() == 0) {
+            inStream = "";
+        }
     }
 
 }

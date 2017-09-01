@@ -18,4 +18,7 @@
 
     <item android:id="@+id/action_upload_log" android:title="@string/action_upload_log"
         android:orderInCategory="4" app:showAsAction="never" />
+
+    <item android:id="@+id/action_toggle_visibility" android:title="@string/action_visible"
+        android:orderInCategory="7" app:showAsAction="never" />
 </menu>

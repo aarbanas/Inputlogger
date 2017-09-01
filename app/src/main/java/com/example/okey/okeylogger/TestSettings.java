@@ -27,7 +27,7 @@ public class TestSettings extends AppCompatActivity {
     long phraseCountVariable = 0;
     boolean showTimeVariable = false;
     boolean showResultsVariable = false;
-    boolean phraseVisabilityVariable = false;
+    boolean phraseRepeatVariable = false;
     boolean cursorMovementVariable = false;
 
     @Override
@@ -48,7 +48,7 @@ public class TestSettings extends AppCompatActivity {
         final RadioButton buttonL = (RadioButton) findViewById(R.id.radioButtonL);
         final Switch showTime = (Switch) findViewById(R.id.switchTime);
         final Switch showResults = (Switch) findViewById(R.id.switchResults);
-        final Switch phraseVisability = (Switch) findViewById(R.id.switchVisability);
+        final Switch phraseRepeat = (Switch) findViewById(R.id.switchPhrases);
         final Switch cursorMovement = (Switch) findViewById(R.id.switchCursor);
         final Button buttonOK = (Button) findViewById(R.id.buttonOk);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
@@ -62,7 +62,7 @@ public class TestSettings extends AppCompatActivity {
             orientationVariable = extras.getString("ORIENTATION");
             showTimeVariable = extras.getBoolean("TIME");
             showResultsVariable = extras.getBoolean("RESULTS");
-            phraseVisabilityVariable = extras.getBoolean("VISABILITY");
+            phraseRepeatVariable = extras.getBoolean("PHRASE_REPEAT");
             cursorMovementVariable = extras.getBoolean("CURSOR");
             testName.setText(testNameVariable);
             keyboardType.setText(keyboardTypeVariable);
@@ -102,12 +102,12 @@ public class TestSettings extends AppCompatActivity {
                     showResults.setChecked(false);
                 }
             }
-            if (phraseVisabilityVariable){
-                if (phraseVisabilityVariable == true){
-                    phraseVisability.setChecked(true);
+            if (phraseRepeatVariable){
+                if (phraseRepeatVariable == true){
+                    phraseRepeat.setChecked(true);
                 }
                 else {
-                    phraseVisability.setChecked(false);
+                    phraseRepeat.setChecked(false);
                 }
             }
             if (cursorMovementVariable){
@@ -237,14 +237,14 @@ public class TestSettings extends AppCompatActivity {
             }
         });
 
-        phraseVisability.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        phraseRepeat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (phraseVisability.isChecked()){
-                    phraseVisabilityVariable = true;
+                if (phraseRepeat.isChecked()){
+                    phraseRepeatVariable = true;
                 }
                 else{
-                    phraseVisabilityVariable = false;
+                    phraseRepeatVariable = false;
                 }
             }
         });
@@ -277,7 +277,7 @@ public class TestSettings extends AppCompatActivity {
                     intent.putExtra("PHRASE_COUNT",phraseCountVariable);
                     intent.putExtra("TIME", showTimeVariable);
                     intent.putExtra("RESULTS", showResultsVariable);
-                    intent.putExtra("VISABILITY", phraseVisabilityVariable);
+                    intent.putExtra("PHRASE_REPEAT", phraseRepeatVariable);
                     intent.putExtra("CURSOR", cursorMovementVariable);
                     setResult(RESULT_OK, intent);
                     finish();

@@ -133,10 +133,10 @@
         android:text="Show results after each phrase" />
 
     <Switch
-        android:id="@+id/switchVisability"
+        android:id="@+id/switchPhrases"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Toggle phrase visability" />
+        android:text="Don't allow user to write same phrase multiple times" />
 
     <Switch
         android:id="@+id/switchCursor"
